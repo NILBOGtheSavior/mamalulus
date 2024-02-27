@@ -1,13 +1,15 @@
 :root {
-    --prim: #0087a5;
+    --prim: rgb(0, 135, 165);
+    --prim75: rgba(0, 135, 165, 0.75);
     --sec: #30c38d;
 }
 
 body {
     font-family: cafe_light;
+    min-width: 200px;
 }
 
-@media (width < 350px) {    /* MEDIA QUERY MOBILE */
+@media (width <= 375px) {    /* MEDIA QUERY MOBILE */
 
     header {
         height: 75px;
@@ -41,6 +43,26 @@ body {
                 background-color: white;
                 height: 2px;
                 width: 100%;
+            }
+        }
+        div#hamburger_menu {
+            display: none;
+            z-index: 5;
+            position: absolute;
+            top: 75px;
+            right: 0px;
+            background-color: var(--prim75);
+            backdrop-filter: blur(15px);
+            padding: 5px;
+            border-radius: 0px 5px;
+            a {
+                width: 50px;
+                padding: 5px 15px;
+                text-decoration: none;
+                color: white;
+                font-size: 1.5em;
+                display: block;
+                
             }
         }
     }
@@ -102,6 +124,7 @@ body {
                 div.foodItem {
                     width: 100%;
                     display: flex;
+                    flex-wrap: wrap;
                     margin-block: 15px;
                     div.foodImage {
                         display: block;
@@ -192,7 +215,7 @@ body {
     }    
 }
 
-@media (350px < width < 450px) {    /* MEDIA QUERY MOBILE */
+@media (375px < width <= 450px) {    /* MEDIA QUERY MOBILE */
 
     header {
         height: 75px;
@@ -215,9 +238,9 @@ body {
         }
         div#hamburger {
             margin: 2px 5px 2px auto;
-            padding: 10px;
-            width: 50px;
-            height: calc(100% - 20px);
+            padding: 25px;
+            width: 30px;
+            height: calc(100% - 50px);
             display: flex;
             flex-direction: column;
             justify-content: space-around;
@@ -227,6 +250,26 @@ body {
                 background-color: white;
                 height: 2px;
                 width: 100%;
+            }
+        }
+        div#hamburger_menu {
+            display: none;
+            z-index: 5;
+            position: absolute;
+            top: 75px;
+            right: 0px;
+            background-color: var(--prim75);
+            backdrop-filter: blur(15px);
+            padding: 5px;
+            border-radius: 0px 5px;
+            a {
+                width: 50px;
+                padding: 5px 15px;
+                text-decoration: none;
+                color: white;
+                font-size: 1.5em;
+                display: block;
+                
             }
         }
     }
@@ -377,7 +420,7 @@ body {
     }    
 }
 
-@media (450px < width < 750px) {    /* MEDIA QUERY TABLET */
+@media (450px < width <= 750px) {    /* MEDIA QUERY TABLET */
 
     header {
         height: 75px;
@@ -400,9 +443,9 @@ body {
         }
         div#hamburger {
             margin: 2px 5px 2px auto;
-            padding: 10px;
-            width: 50px;
-            height: calc(100% - 20px);
+            padding: 20px;
+            width: 40px;
+            height: calc(100% - 40px);
             display: flex;
             flex-direction: column;
             justify-content: space-around;
@@ -412,6 +455,26 @@ body {
                 background-color: white;
                 height: 2px;
                 width: 100%;
+            }
+        }
+        div#hamburger_menu {
+            display: none;
+            z-index: 5;
+            position: absolute;
+            top: 75px;
+            right: 0px;
+            background-color: var(--prim75);
+            backdrop-filter: blur(15px);
+            padding: 5px;
+            border-radius: 0px 5px;
+            a {
+                width: 50px;
+                padding: 5px 15px;
+                text-decoration: none;
+                color: white;
+                font-size: 1.5em;
+                display: block;
+                
             }
         }
     }
@@ -562,7 +625,7 @@ body {
     }    
 }
 
-@media (750px < width < 1300px) {    /* MEDIA QUERY TABLET */
+@media (750px < width <= 1300px) {    /* MEDIA QUERY TABLET */
 
     header {
         height: 50px;
@@ -584,6 +647,9 @@ body {
             }
         }
         div#hamburger {
+            display: none;
+        }
+        div#hamburger_menu {
             display: none;
         }
     }
@@ -734,7 +800,7 @@ body {
     }    
 }
 
-@media (width >= 1300px) {    /* MEDIA QUERY DESKTOP */
+@media (width > 1300px) {    /* MEDIA QUERY DESKTOP */
 
 header {
     height: 50px;
