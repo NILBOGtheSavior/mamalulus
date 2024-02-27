@@ -7,7 +7,377 @@ body {
     font-family: cafe_light;
 }
 
-@media (min-width: 250px) {    /* MEDIA QUERY MOBILE */
+@media (width < 350px) {    /* MEDIA QUERY MOBILE */
+
+    header {
+        height: 75px;
+        display: flex;
+        background-color: var(--prim);
+        img {
+            display: none;
+        }
+        nav {
+            display: none;
+            align-items: center;
+            padding-inline: 50px;
+            gap: 50px;
+            a {
+                text-decoration: none;
+                font-size: 2em;
+                color: white;
+            }
+        }
+        div#hamburger {
+            margin: 2px 5px 2px auto;
+            padding: 10px;
+            width: 50px;
+            height: calc(100% - 20px);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            div {
+                /* margin: 5px; */
+                display: block;
+                background-color: white;
+                height: 2px;
+                width: 100%;
+            }
+        }
+    }
+    
+    main {
+        div#hero {
+            height: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url(../img/hero.jpg);
+            /* background-attachment: fixed; */
+            background-position: center;
+            background-size: cover;
+            div.container {
+                img {
+                    filter: drop-shadow(0px 5px 5px black);
+                    width: 100%;
+                }
+                a.btn {
+                    display: block;
+                    width: 100px;
+                    padding: 10px;
+                    margin: 25px auto;
+                    text-align: center;
+                    font-size: 1.5em;
+                    /* font-weight: bold; */
+                    border-radius: 15px;
+                    text-decoration: none;
+                    color: white;
+                    box-shadow: 0px 2px 5px black;
+                }
+                a.prim {
+                    background-color: var(--sec);
+                    /* border: solid 2px var(--sec); */
+                }
+                a.sec {
+                    background-color: rgba(255, 255, 255, 0.5);
+                    color: black;
+                    /* border: solid 2px var(--sec); */
+                    backdrop-filter: blur(15px);
+                }
+            }
+        }
+        section {
+            margin-inline: 10%;
+            margin-block: 25px;
+            h2 {
+                font-size: 2.5em;
+                margin-block: 10px;
+                font-weight: 100;
+            }
+            p {
+                font-size: 1.25em;
+            }
+            div.menu_section {
+                display: flex;
+                flex-direction: column;
+                div.foodItem {
+                    width: 100%;
+                    display: flex;
+                    margin-block: 15px;
+                    div.foodImage {
+                        display: block;
+                        min-width: 150px;
+                        aspect-ratio: 1/1;
+                        background-position: center;
+                        background-size: cover;
+                        padding: 10px;
+                    }
+                    div.info {
+                        padding: 10px;
+                        h3 {
+                            font-size: 1.75em;
+                            font-family: cafe_bold;
+                        }
+                        p {
+                            font-size: 1.5em;
+                        }
+                    }
+                }
+            }
+        }
+        section#content {
+            div#locations {
+                display: flex;
+                flex-wrap: wrap;
+                div.info {
+                    div.selector {
+                        display: flex;
+                        gap: 5px 15px;
+                        flex-wrap: wrap;
+                    }
+                    button {
+                        background-color: transparent;
+                        border: solid 2px var(--prim);
+                        margin-block: 5px;
+                        padding: 2px;
+                        border-radius: 5px;
+                        font-family: cafe;
+                        transition: 500ms;
+                        cursor: pointer;
+                    }
+                    button:hover {
+                        background-color: var(--sec);
+                    }
+                }
+                div.map {
+                    min-width: 200px;
+                    width: 100%;
+                    aspect-ratio: 1/1;
+                    div.base {
+                        width: 100%;
+                        height: 100%;
+                        background-image: url("../img/map.png");
+                    }
+                }
+            }
+        }
+    }
+    
+    footer {
+        background-color: var(--prim);
+        padding-block: 20px;
+        padding-inline: 10%;
+        color: white;
+        div#footer_nav {
+            display: block;
+            font-size: 1.25em;
+            a {
+                text-decoration: none;
+                color: white;
+                display: block;
+                padding-block: 5px;
+            }
+        }
+        div#copy {
+            display: flex;
+            justify-content: space-between;
+            padding-block: 20px;
+            p {
+                a {
+                    text-decoration: none;
+                    font-weight: bold;
+                    color: var(--sec);
+                }
+            }
+        }
+    }    
+}
+
+@media (350px < width < 450px) {    /* MEDIA QUERY MOBILE */
+
+    header {
+        height: 75px;
+        display: flex;
+        background-color: var(--prim);
+        img {
+            padding: 25px;
+            height: calc(100% - 50px);
+        }
+        nav {
+            display: none;
+            align-items: center;
+            padding-inline: 50px;
+            gap: 50px;
+            a {
+                text-decoration: none;
+                font-size: 2em;
+                color: white;
+            }
+        }
+        div#hamburger {
+            margin: 2px 5px 2px auto;
+            padding: 10px;
+            width: 50px;
+            height: calc(100% - 20px);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            div {
+                /* margin: 5px; */
+                display: block;
+                background-color: white;
+                height: 2px;
+                width: 100%;
+            }
+        }
+    }
+    
+    main {
+        div#hero {
+            height: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url(../img/hero.jpg);
+            /* background-attachment: fixed; */
+            background-position: center;
+            background-size: cover;
+            div.container {
+                img {
+                    filter: drop-shadow(0px 5px 5px black);
+                }
+                a.btn {
+                    display: inline-block;
+                    width: 100px;
+                    padding: 10px;
+                    margin: 25px;
+                    text-align: center;
+                    font-size: 1.5em;
+                    /* font-weight: bold; */
+                    border-radius: 15px;
+                    text-decoration: none;
+                    color: white;
+                    box-shadow: 0px 2px 5px black;
+                }
+                a.prim {
+                    background-color: var(--sec);
+                    /* border: solid 2px var(--sec); */
+                }
+                a.sec {
+                    background-color: rgba(255, 255, 255, 0.5);
+                    color: black;
+                    /* border: solid 2px var(--sec); */
+                    backdrop-filter: blur(15px);
+                }
+            }
+        }
+        section {
+            margin-inline: 10%;
+            margin-block: 25px;
+            h2 {
+                font-size: 2.5em;
+                margin-block: 10px;
+                font-weight: 100;
+            }
+            p {
+                font-size: 1.25em;
+            }
+            div.menu_section {
+                display: flex;
+                flex-direction: column;
+                div.foodItem {
+                    width: 100%;
+                    display: flex;
+                    margin-block: 15px;
+                    div.foodImage {
+                        display: block;
+                        min-width: 150px;
+                        aspect-ratio: 1/1;
+                        background-position: center;
+                        background-size: cover;
+                        padding: 10px;
+                    }
+                    div.info {
+                        padding: 10px;
+                        h3 {
+                            font-size: 1.75em;
+                            font-family: cafe_bold;
+                        }
+                        p {
+                            font-size: 1.5em;
+                        }
+                    }
+                }
+            }
+        }
+        section#content {
+            div#locations {
+                display: flex;
+                flex-wrap: wrap;
+                div.info {
+                    div.selector {
+                        display: flex;
+                        gap: 5px 15px;
+                        flex-wrap: wrap;
+                    }
+                    button {
+                        background-color: transparent;
+                        border: solid 2px var(--prim);
+                        margin-block: 5px;
+                        padding: 2px;
+                        border-radius: 5px;
+                        font-family: cafe;
+                        transition: 500ms;
+                        cursor: pointer;
+                    }
+                    button:hover {
+                        background-color: var(--sec);
+                    }
+                }
+                div.map {
+                    min-width: 200px;
+                    width: 100%;
+                    aspect-ratio: 1/1;
+                    div.base {
+                        width: 100%;
+                        height: 100%;
+                        background-image: url("../img/map.png");
+                    }
+                }
+            }
+        }
+    }
+    
+    footer {
+        background-color: var(--prim);
+        padding-block: 20px;
+        padding-inline: 10%;
+        color: white;
+        div#footer_nav {
+            display: block;
+            font-size: 1.25em;
+            a {
+                text-decoration: none;
+                color: white;
+                display: block;
+                padding-block: 5px;
+            }
+        }
+        div#copy {
+            display: flex;
+            justify-content: space-between;
+            padding-block: 20px;
+            p {
+                a {
+                    text-decoration: none;
+                    font-weight: bold;
+                    color: var(--sec);
+                }
+            }
+        }
+    }    
+}
+
+@media (450px < width < 750px) {    /* MEDIA QUERY TABLET */
 
     header {
         height: 75px;
@@ -127,6 +497,7 @@ body {
         section#content {
             div#locations {
                 display: flex;
+                flex-wrap: wrap;
                 div.info {
                     div.selector {
                         display: flex;
@@ -191,7 +562,7 @@ body {
     }    
 }
 
-@media (min-width: 750px) {    /* MEDIA QUERY TABLET */
+@media (750px < width < 1300px) {    /* MEDIA QUERY TABLET */
 
     header {
         height: 50px;
@@ -363,7 +734,7 @@ body {
     }    
 }
 
-@media (min-width: 1300px) {    /* MEDIA QUERY DESKTOP */
+@media (width >= 1300px) {    /* MEDIA QUERY DESKTOP */
 
 header {
     height: 50px;
